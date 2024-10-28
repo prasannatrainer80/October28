@@ -1,0 +1,209 @@
+Algorithms and Datastructures :
+
+Algorithm 
+
+Finite set of instructions which are being carried in specific order to perform specific task.
+
+Algorithm s not a code or program, it just a solution (logic) which is specified in simple English. 
+
+Algorithm will be same for any programming language, 
+
+as the programmer needs to convert algorithm into a program code. 
+
+Characterstics : 
+________________
+
+Input : An algorithm has some input vaues, we can pass 0 or some input values 
+	as for prog, which are inputs are reqd that comes here. 
+
+Output : What is the outcome we are getting after process. 
+
+Finiteness : Algorithm should have finiteness. Here, finiteness means that within no.of steps we can complete the task or program, as we can trust. 
+
+Effectiveness : An algorithm should be effective as each instruction in an algorithm affects the overall process. 
+
+Language Independent : Algorithm will be same for any programming language, as it is step by step instructions as they are converted into programming language. 
+
+Algorithm for sum of 2 nos : 
+___________________________
+
+Step 1 : Start
+
+Step 2 : Declare firstNo, secondNo, result as number varibles
+
+Step 3 : Accept firstNo, SecondNo 
+
+Step 4 : Compute result as FirstNo + SecondNo
+
+Step 5 : Print result
+
+Step 6 : End 
+
+For Problem Solving, we have various approaches as 
+
+1) Brute Force Approach : This kind of problem solving approach ensures to list out all
+possibilities of the given problem solution, 
+
+	Optimizing : From the list of given solutions, we need to pick one efficient solution (optionize) and apply for the given scenario.
+
+-> Write a Program/pseudo code that accept a number and 
+check if its positive return 1 if its negative return -1.
+
+int check(int x) {
+   if (x >= 0)
+   {
+	return 1;
+   }
+   if (x < 0) 
+   {
+       return -1;
+   }
+}
+
+_______________________________________________________
+
+
+int check(int x) {
+    if (x >=0 )
+    {
+ 	return 1;
+    }
+    return -1;
+}
+
+	Heuristic
+
+	
+When to stop is as soon as you are satisfied with the given solution, and picked for efficient then we can stop for other solutions. 
+
+Heuristic approach as rule of thumb that helps you to decide which possibilities
+we should look at first.
+
+Pros : 
+_______
+
+	-> Shows all possibilities of given solution
+
+	-> This type of algorithm is applicable for any domain
+
+	-> It is mainly used for solving small problems.
+
+ 
+
+2) Greedy Approach : Decides what to do in each step, only based on current step, we need to see any alternative action to be perfomed. 
+
+	It makes locally optimal code choice in each step, hoping to find the global optimum solution in the end. 
+
+Major principles we use in implementation of greedy approach is 
+	
+(i) Greedy choice property means that the problem is so that the 
+solution can be reached by making greedy choices in each steps
+
+(ii) Optimal Substructure : Means that the optiomal solution to a problem,
+is a collection of subprograms to be grouped to solve a problem.
+
+Divide and Conquer : 
+
+It is famous algorithm pattern, the design is to take a dispute on huge input. 
+
+As the problem seems to be big and not to be solved, break the program
+into minor pieces, decie the problem on each and small peiece and then
+merge the solutions into a global solution. 
+
+
+Divide : The original problem into a set of subproblems
+
+Conquer : Solve every subproblem individually, recursively
+
+Combine : Put together the solutions of the subproblems to get the solution to 
+whole problem.
+
+Data Structures : 
+____________________
+
+Provides best solution to store and retrieve data, perform add/remove or update
+operations to be given in data. 
+
+The main data structures comes here are 
+
+1) Arrays
+
+2) Linked List
+
+3) Stack and Queue
+
+4) Trees
+
+5) Graphs 
+
+An array is the finite ordered set of homogenous elements, means all the elements belongs to same data type. 
+
+The group of related data type elements are to be stored known as array, all the elements of array are stored in successive memory locations. 
+
+int a[30];
+
+JavaFoundation students[50];
+
+BTechCs3 stud[30];
+
+
+Assume, we have array a as {1,2,3,4,5,6}
+
+a[0]=1
+a[1]=2
+a[2]=3
+a[3]=4
+a[4]=5
+a[5]=6
+
+The major drawback with arrays are, arrays are static data structures, as once they are assigned we cannot alter the size.  As dynamic memory allocation not possible as 
+
+And one more drawback in arrays is if you add or delete any elements all successive elements position to be altered
+
+Example :
+
+above list if i delete element 3 then 
+
+a[0]=1
+a[1]=2
+a[2]=4
+a[3]=5
+a[4]=6
+
+3) Divide and Conquer
+
+4) Dynamic Programming
+
+Searching Techniques  
+______________________
+
+1) Linear Search
+
+It is a sequential search mechanism ensures, 
+
+first 0th index to last element we need to search the element, if element found then stop searching
+
+Efficiency is 
+
+Best Case 1 time O(1)
+
+Worst case nth time O(n) as if i need to search in one lakh records then it takes 1 lakh times
+
+so this algorithm is insufficient.
+
+STACK : 
+
+
+We discussed w.r.t. 
+
+Bubble
+Selection
+Insertion
+
+Quicksort : This approach allows you to sort list which is having large 
+no.of elements 
+
+Quick Sort Purely works on basis of divide and conquer
+
+
+
