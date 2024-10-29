@@ -379,6 +379,24 @@ Retrospective Meeting
 
 	  -> Is there any serious actions to be taken place 
 
+What is main objective of Agile  
+_________________________________
+
+1) Customer Satisfaction : Always there is scope to see work copy ready as customer will be happy
+
+2) Welcome Change : Always there is scope to customer to come with new requirements in the middle of product development.  Agile process should work to increase customer's competitive advantage.
+
+3) Deliver Working Sofware : We can frequently deliver working copy, ranging from a few weeks to few months, 
+
+4) Collaboration : All teams are connected from various places and work as a unit
+
+5) Motivation : As a group or individual you can motivate and getting the things to be done
+
+6) Openness : Any body open to share their views and will be considered by relevant person
+
+7) Simplicity : Keep things simple and use simple terms to measure work that is not completed
+
+8) 
 
 
 
