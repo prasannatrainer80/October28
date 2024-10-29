@@ -1,0 +1,397 @@
+SDLC (Software Development Life Cycle) System Development Life Cycle
+
+It is a processs followed by a software project or any daily task to be implemented.  It consists of a detailed plan describing how to develop, maintain, replace and alter or enhance software. 
+
+1) Feasibility Study : In this stage in a company senior person takes the requirements from the customer or client and then he checks for the product is feasible or not w.r.t. company manpower, infra and timelines.
+
+If everything fine, then it moves to next step. 
+
+2) Requirements Analysys : IN this phase each and every requirement specified by the client/customer verified and documented properly. This document known as SRS (Software Requirement Specification) As per company standards mostly people use UML diagrams to specify requirements. 
+
+3) Design : Design is the heart w.r.t. SDLC. It contains day-wise work to be completed entire schedule to be given, if any deviations to be happened that need to be done in corresponding day. 
+
+4) Coding : In coding, we need to select relevant programming language to write the code and complete the project.
+
+5) Testing : Here, we need to test functionality and each and every requirement to be tested seriously, as if goes fine, else give it back to developer (this phase is known as feedback)
+
+6) Maintenance : Once the product delivered to the client, we need to provide support for specific time to fix any issues happens at runtime. 
+
+What is Testing
+
+It is a process in which defects are identified, isolated and subjected for rectification ensures that the product is defect free inorder to produce the quality of product in the end and hence leads to customer satifcation.
+
+(I) Defect : If tester identifies something known as defect.
+
+(ii) Bug : If programmer accepts the defect known as bug. 
+
+*** All defects are not bugs, but all bugs are defects ***
+
+(iii) Error : If programmer identifies some error in your code known as Error. 
+
+(iv) Fatal : If client identifies some mistake in your app known as fatal
+
+What is Test Case : 
+
+It is an idea of test engineer to test something on an application based on the requirements. 
+
+SDLC Water Fall Model : 
+________________________
+
+
+Water fall model is the first approach of SDLC to implement on any product. 
+
+It goes w.r.t. Sequential flow, as till one phases finishes you cannot move to another phase. 
+
+Guidelines : 
+_____________	
+
+	-> Requirements are very well documented, clear and fixed
+
+	-> Product definition is stable
+
+	-> No Change in Requirements
+
+Pros : 
+______
+
+	-> easy to start and understand
+
+	-> phases are started and completed at a time
+
+	-> Clearly defined stages
+
+	-> Well arranged tasks
+
+	-> All process and results are documented.
+
+Cons : 
+______
+
+	-> We can't see the preview of document till end that may lead to surprises
+
+	-> High amount of risk and uncertainity
+
+	-> Difficult to measure progress within the stages
+
+	-> Cannot accommodate changing requirements
+
+
+V Model : 
+__________
+
+Validation : It is a process of checking the developed application or 
+its related parts in order to confirm whether they are working accordingly
+to the requirements or not. 
+
+Verification : It is a process in which one will check each and every role in the organization in order to confirm whether they are working according to the companies guidelines or not
+
+*** Validation always happens on the product...Verification always happens on the process ***
+
+
+Spiral Model : 
+______________
+
+We have only 4 phases mostly involved known as
+
+1) Identification
+
+2) Design
+
+3) Code
+
+4) Risk Analysis 
+
+This model mostly used to minimize the risks to customer as well as for development firms.
+
+-> When there is budget constraints
+
+-> Medium and high-risk projects
+
+-> Requirements are complex and need to have deep study on them
+
+-> Customer is not sure about requirements. 
+
+Pros : 
+_______
+
+	Changing requirements can be accommodated
+
+	Users can see the preview of ur app
+
+	Requirements captured and documented properly
+
+Cons : 
+_______
+
+	Process is complex
+
+	Not suitable for low risk project
+
+_________________________________________________________________________________________________
+
+In Previous models, we have various problems as 
+
+-> Review of the working copy not possible
+
+-> Need to monitor performance
+
+-> Conducting meetings and daily work status we cannot take place
+
+-> Need to document good or improvements properly
+
+-> Need to update customer voice to employees not happening
+
+________________________________________________________________________
+
+Agile is a software development methodology to build software incrementally using short iterations 
+
+Agile will follow basically 4 principles known as 
+
+-> Design
+
+-> Code
+
+-> Integrate
+
+-> Test
+
+In Agile we have various roles known as
+
+1) Scrum Master : he is a project manager or business analyst in your team who helps the team members to follow agile practices so that they can meet their commitments. 
+
+	-> Enable close communication between roles and functions 
+
+	-> Please remove any kind of disturbances
+
+	-> Any doubts on requirements to be clarified
+
+To ensures above Scrum master needs to conduct 
+
+	-> Daily Stand up
+
+	-> Planned Meetings
+
+	-> Demos
+
+	-> Review
+
+	-> Retrospectie Meetings 
+
+
+
+2) Product Owner
+
+	Product owner is the one who drives the product from business perspective.
+
+	-> Define the requirements and prioritize their values
+
+	-> Determine the release date and context
+
+	-> Ensure team always working on most valued requirement
+
+	-> Represent the voice of customer
+
+	-> Accept the user stores that meet the definition of done and
+		define the accepted criteria
+
+User Story : 
+
+	User Story is a requirement which defines what required by the user as 
+functionality. 
+
+	The syntax for user story will be 
+
+	As a Developer I am implementing functionality of Bank Project Trasanctions Module it has business value as customer can deposit and withdraw. 
+
+Then the userStory name is Bank Transactions
+
+Bank Transactions contains various tasks as
+
+(I) Deposit
+
+(ii) Withdraw
+
+(iii) NetBanking
+
+(iii) PhonePe
+
+The tasks are estimated in terms of hours typically from 4 to 48 hrs 
+
+So above tasks will be given as 
+
+deposit 4hrs
+
+Withdraw 6 hrs
+
+NetBanking 12 hrs
+
+PhonePe 4 hrs
+
+User Story talks about what is to be done...It defines what a user needs
+
+Tasks talk about how it is to be done.
+
+Stories are implemented by tasks. Each story is a collection of tasks
+
+Once User Story Done
+
+Stories are validated using Acceptance Criteria
+
+Here we need to check the below points as
+
+	-> All tasks (development, testing) are completed
+
+	-> All Acceptance tests are running and are passed
+
+	-> No Open Defect
+
+	-> Product owner accepted ur story
+
+What is Daily Standup 
+
+   A daily standup meeting is among the team members and it is held roughly for 15 mins 
+
+   Every member has to answer three important questions as 
+	
+	-> What I did yesterday
+
+	-> What I will do today
+
+	-> Is there any challenge in my work
+
+	- Am I blocked because of any reason 
+
+Daily standup is only for status update, not for any discussion.  
+
+Participants should stand instead of sitting so that meeting gets over quickly.
+
+Why Daily Standup is important 
+_______________________________
+
+	=> The team can evaluate the progress on daily basis and see if they can 
+	deliver as per plan
+
+	=> Each team member informs all of their work commitments for the day
+
+	-> It provides visibility to the team on any delay.
+
+Who is attending the Standup 
+
+	Scrum Master, Product Owner and Delivery Team
+
+	Strum master is responsible to take note of each team members queries and the problems they are 
+		facing
+
+User Story : It is a requirement which formulated I few sentence lines 
+
+Where we need to place the documentation for the project. 
+
+The requirements are placed in product backlog 
+
+This is taken care by Product Owner
+
+Product owner takes any requirements from Product Backlog and make as detailed known as 
+
+Sprint Backlog 
+
+Product Backlog is a list of items to be done..
+
+Items are ranked with feature descriptions. 
+
+Items should be broken into User Stoires 
+
+Why Product Backlog :
+____________________
+
+	-> Its Prepared so that estimated time to be specified for every feature.
+
+	-> It helps in planning the roadamp for the product
+
+	-> Which features to be prioritize first, team ranks the item and then builds value
+
+
+Agile will basically follow MOSCOW principle
+
+Must Have
+
+Should Have
+
+Could Have
+
+Wont Have
+
+Each User Story also follows principles known as (INVEST)
+
+Independent
+Negotiable
+Valuable
+Estimable
+Small
+Testable
+
+A sprint backlog is a list of work items your team plans to complete during the project sprint. These items are usually pulled from the product backlog during the sprint planning session. A clear sprint backlog prevents scope by clarifying exatly what your team will be doing. 
+
+Sprint Backlog is subset of product backlog that lists tasks that need to be completed during sprint. 
+
+Iteration : In Agile iteration is a time boxed user stories tobe worked and accepted. 
+An iteration also termed as Sprint. 
+
+Sprints always happen on weekly basis. 
+
+There first we need to define the tasks to be completed within sprint and document in the sprint backlog.
+
+Now, at the time of verification, acceptance criteria comes into picture and ensures all the specifications are completed or not 
+
+Now, sprint meeting to be conducted followed by sprint retrospective meeting, after that sprint closure will happen 
+
+In Agile, projects make progress in terms of sprints. 
+
+Product can be designed, coded and tested during the sprint. 
+
+Typical duration for sprint is 2 to 4 weeks, worst case calendar month 
+
+Sprint Closure will happen as 
+
+	-> Sprint Meeting
+
+	-> Sprint Review Meeting
+
+	-> Sprint Retrospective Meeting
+
+No Changes between sprint, if any changes that needs to be added to next sprint only. 
+
+Sprint Meeting to be conducted to Present what are new things are happened in the current iteration. 
+
+Review Meeting ensures, what is actual (vs) expected and any deviations
+
+Retrospective Meeting 
+
+	Purely comes as Inspect and Adapt
+	
+	Team checks the way they worked in the sprint and identifies positive ways of working together that
+	can be encouraged 
+
+	They identify
+
+	  -> What went well
+
+	  -> Areas of improvement
+
+	  -> Is there any serious actions to be taken place 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

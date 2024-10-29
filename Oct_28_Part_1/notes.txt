@@ -205,5 +205,362 @@ no.of elements
 
 Quick Sort Purely works on basis of divide and conquer
 
+_________________________________________________________________________
+
+
+How Quicksort algorithm works 
+
+Identify one element as pivot 
+
+as mostly first element or middle element. 
+
+in ----------------> find out first greatest element than pivot
+
+<------------------- find out first smallest element than pivot
+
+now please swap it
+
+if both are in correct order, then break the list in to sublist and apply the 
+same rule. 
+
+___________________________________________________________________________________________________
+
+
+35 90 12 29 87 75 6 36 34 91 11 3 44 52 88 92 21 82
+
+Take first element as pivot 
+
+35 
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+90
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+
+21
+
+both to be swapped
+
+35 21 12 29 87 75 6 36 34 91 11 3 44 52 88 92 90 82
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+87
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+
+3
+
+Both to be swapped
+
+35 21 12 29 3 75 6 36 34 91 11 87 44 52 88 92 90 82
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+75
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+
+11
+
+Both to be swapped
+
+35 21 12 29 3 11 6 36 34 91 75 87 44 52 88 92 90 82
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+36
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+
+34
+
+Both to be swapped
+
+35 21 12 29 3 11 6 34 36 91 75 87 44 52 88 92 90 82
+
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+36
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+
+34
+
+No Swap as both in correct Order
+
+35 21 12 29 3 11 6 34  -> List 1
+
+36 91 75 87 44 52 88 92 90 82 -> List 2
+
+35 21 12 29 3 11 6 34
+
+35 as pivot 
+
+
+-------------------------------------> find out first element which is greater than pivot (35) 
+
+No greatest elemenet as pivot is greatest (35)
+
+<----------------------------------- Rev direction find out which element is less than pivot (35) 
+ 
+34
+
+Swap needed
+
+34 21 12 29 3 11 6 35
+
+34 is pivot 
+
+put 35 to separate list   ***************** Result to be combined 35 ****
+
+34 21 12 29 3 11 6 
+
+34 21 12 29 3 11 6
+
+34 is pivot 
+
+-----------------------------> Find out first greatest element than pivot 
+
+no greter element as pivot is greatest 34
+
+<---------------------- Find out first smallest element than pivot
+
+6
+
+swap them
+
+6 21 12 29 3 11 34
+
+34 *************************** Result to be combined **********************
+
+
+6 21 12 29 3 11 
+
+6 is pivot 
+
+-----------------------> Find out first greater element than pivot 
+
+21
+
+<---------------------- Find out which is first smallest elemnt than pivot 
+
+3
+
+Swap needed
+
+ 
+6 3 12 29 21 11 
+
+6
+
+-----------------------> Find out first greater element than pivot 
+12
+
+<----------------------- Find out which is smallest element than pivot
+
+3
+
+NO swap as break list
+
+6 3 
+
+3 6 *********** Result to be concatednated ***
+
+12 29 21 11 
+
+12 is pivot
+
+------------------------> Find out first element which is greater than pivot 
+
+29
+
+<------------------------ Find out first element which is less than pivot 
+
+11
+
+swap needed
+
+12 11 21 29
+
+------------------------> Find out first element which is greater than pivot 
+21
+
+<---------------------- Find out small element which is less than pivot
+
+11
+
+no swap break it
+
+12 11
+
+21 29
+
+11 12 21 29 
+
+Combine All result
+
+3 6 11 12 21 29 34 35 36 ############################################ List 1 sorted #################
+
+___________________________________________________________________________________
+
+91 75 87 44 52 88 92 90 82
+
+91 as pivot 
+
+----------------------------------------------------> Find out first greaest element than pivot 
+
+92
+
+<-------------------------------------------------- Find out first smallest element than pivot
+
+82
+
+swap
+
+91 75 87 44 52 88 82 90 92
+
+----------------------------------------------------> Find out first greaest element than pivot 
+
+No swap as both are in correct order
+
+break
+
+91, 92 -> Final result *************************************************
+
+75 87 44 52 88 82 90
+
+75 pivot 
+
+------------------------------------------------------------------> Find out first greatest element 
+
+87
+
+<---------------------------------------------------------- Find out first element which is less than pivot
+
+52
+
+Swap
+
+75 52 44 87 88 82 90
+
+------------------------------------------------------------------> Find out first greatest element 
+
+87
+
+<------------------------------------------------------- Find out first smallest element. 
+
+44
+
+no swap break it
+
+75 52 44
+
+87 88 82 90
+
+44 52 75 82 87 88 90 91 92 -------------------------- List 2
+
+Combined List1 and LIst 2
+
+3 6 11 12 21 29 34 35 36 44 52 75 82 87 88 90 91 92
+
+________________________________________________________________________________________________________
+
+29 11 88 77 33 7 91 44 66 55 
+
+29 is pivot
+
+-------------------------------------------> Find out first greatest element than pivot
+
+88
+
+<------------------------------------------ Find out first smallest element than pivot
+
+7
+
+Swap
+
+29 11 7 77 33 88 91 44 66 55 
+
+
+-------------------------------------------> Find out first greatest element than pivot
+
+77
+
+<------------------------------------------- Find out first smallest element than pivot (29)
+
+7
+
+Both are in correct Order, no swap break it
+
+
+29 11 7 -> List 1
+
+77 33 88 91 44 66 55 -> List 2
+
+List 1 after 1 iteration 7 11 29 ->>>>>>>>>>>>>>>>>>>> Sorted >>>>>>>>>>>>>>>>>>>
+
+List 2
+
+77 33 88 91 44 66 55 -> List 2
+
+77 is pivot 
+
+-------------------------------------------------------> Find out first greatest element than pivot
+
+88
+
+<--------------------------------------------- Find out first smallest element than pivot
+
+55
+
+Swap
+
+
+77 33 55 91 44 66 88
+
+-------------------------------------------------------> Find out first greatest element than pivot
+91
+
+<------------------------------------------------------- Find out first smallest element than pivot
+
+66
+
+Swap
+
+77 33 55 66 44 91 88
+
+------------------------------------------------------> Find out first greatest element than pivot
+
+91
+
+<----------------------------------------------------- Find out first smallest than pivot
+
+44
+
+no swap break it
+
+77 33 55 66 44 
+
+91 88
+
+88 91
+
+77 33 55 66 44 
+
+44 33 55 66 77
+
+34 44 55 66 77 88 91 >>>>>>>>>>>>>>>>>>>>>>>>>>>>> Output 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Combining
+
+7 11 29 34 44 55 66 77 88 91
+
+
+
+
+
 
 
