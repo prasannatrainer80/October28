@@ -1,0 +1,107 @@
+Drawbacks with File System :
+_______________________________
+
+
+1) No Security
+
+2) We cannot handle various data polymorphisms 
+
+3) Everytime it creates duplicate entries then updated information not stored in master copy.
+
+Database : A database is set of interrelated files, stored with min. redundancy to serve many users work concurrently. 
+
+DBMS (Database Management System) 
+
+The software that which allows you to perform transactions on data like adding new data, modifying already existing data and removing unwanted data known as DBMS. 
+
+Objectives : 
+______________
+
+	-> Provides an efficient and convenient env, that which allows you to store data in and retrieve 
+		data
+
+	-> Grating access on data to users based on their credentials. 
+
+Drawbacks : 
+___________
+
+	(i) Data Redundancy
+
+       (ii) Risk to Data Integrity
+
+      (iii) Data Isolation
+
+       (iv) Difficult Access to data
+
+	(v) Unsatisfactory Security Measures 
+
+Data Modelling : 
+_______________
+
+
+Data Model : It is the description of organization of data in database, and also describes the relationship among the data and any constraints that have to be defined on data. 
+
+There are 2 types of data models known as 
+
+(i) Object Based Logical Model
+
+Focuses on describing the data, and the relationship among the data and any constraints defined. 
+
+E-R diagrams : Entity is a thing that which can be easily identified. A person we call as an entity, a place we call as an entity. Entity can be represented by using rectangle symbol. 
+
+Relationship : It is an association among various entities. 
+
+Attributes : the properties of the given entity known as attribute. There are various types of attributes 
+known as
+
+	(i) Direct Attributes 
+
+	(ii) Multi-Valued Attributes
+
+	(iii) Derived Attributes 
+
+
+Relationship is an association among various entities. 
+
+There are various types of relationships known as 
+
+(i) One To One  : One field in first entity exactly matches with one record
+		   in second entity. 
+
+(ii) One to Many : One Record in table A will have multiple records in table B
+
+(iii) Many to Many : One record in table A will have multiple records in table B,
+and One record in table B will have multiple records in table A known as Many to Many relationship.
+
+
+(ii) Record Based Logical Model
+
+
+
+Record Based Models : 
+
+1) Hierarchical model : Data is represented in the form of tree, data in hierarchical model is represented by a collection of records and relationships between the data are represented by links. 
+
+2) Network Model : similar to hierarchical model in the way that the data and the relationships among them are represented in the form of records and links. You can represent the records in the daabase graphically. 
+
+3) Relational Model : A table in the database has fixed record length with fixed number of attribute or fields. 
+
+
+The row in a table is called tuple and the column is called an attribute. Every column in the table must have a unique name, the no.of tuples is called the cardinality of the table, and the no.of attributes is called the degree of the table. 
+
+
+Relational system ensures we can identify data w.r.t. keys
+
+There are various types of keys known as
+
+Employ(Empno, Name, Gender, Dept, Salary,SalaryDate,AadharNo)
+
+1) Candidate Key : Any key that which uniquely identifies rows of a table known as candidate key (Empno, AadharNo)
+
+2) Primary Key : One of the candidate key needs to be chosen as primary key based on priority. Primary key cannot be NULL and not duplicated (Empno) 
+
+3) Alternate Key : Any key that which is candidate key, but not primary key known as alternate key. (AadharNo)
+
+4) Composite Key : Any key that which uniquely identifies rows of a table made up of more than one attribute known as composite key. (Empno+SalDate) Empno can exist multiple times, Saldate exists multiple times but combination not to be repeated. 
+
+5) Foreign Key : Primary Key in the parent table will be foreign key in the child table. 
