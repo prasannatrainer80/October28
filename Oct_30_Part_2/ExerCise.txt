@@ -1,0 +1,43 @@
+1) Display all records from Agent Table
+
+2) Display AgentId, FirstName,LastName,City,State from Agent table
+
+3) Display all records whose gender is 'MALE'
+
+4) Display All records whose city is 'Hyderabad'
+
+5) Display all records whose country is 'USA'
+
+6) Display all records whose name starts with 'S'
+
+7) Display all records whose name ends with 'A'
+
+8) Write a query as if maritalStatus is 0 then 'Unmarried' else 'Married
+
+9) Generate rank() on based on the city wise
+
+10) Display top 5 records based on dob (date of birth) 
+
+11) Display all records sort by Country and FirstName basis
+
+____________________________________________________________________________________
+
+1) Display all records from Policy Tabe
+
+2) Display PolicyId,ModalPremium,AnnualPremium,PaymentModeId from Policy Table
+
+3) Display dense_rank() based on annualpremium
+
+4) Display all records whose annualpremium > 2 lacs
+
+5) Display all records whose annualpremium from 1 lac to 2 lacs
+
+6) Display info as if paymentModeId is 1 then 'Yearly' is 2 then 'Half-Yearly'
+and 3 then 'Yearly'
+
+7) Dispaly top 3 records based on annualpremium
+
+8) Display All records sort by AnnualPremium Descending
+
+9) Display all records whose ModalPremium > 50000
+
