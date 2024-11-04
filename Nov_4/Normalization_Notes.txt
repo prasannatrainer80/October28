@@ -146,6 +146,113 @@ Student(StudentId+,StudentName,Gender,DateOfJoin,DeptCode-)
 Attendance(AttendanceId+,AttendanceDate,AttendanceStatus,StudentId-)
 
 
+Code Words : 
+
+1NF : Atomic values 
+
+2NF : Functional Dependency
+
+3NF : Transitive Dependency
+
+_______________________________________________________________
+
+
+Joins : Joins allows you to extract data from more than one table. 
+
+There are various types of joins known as 
+
+1) Inner Join : Acts as an intersect operator. Used to extract only the common records from the given tables. 
+
+Dept 
+____
+
+deptno	int	NO	PRI		
+dname	varchar(14)	YES			
+loc	varchar(13)	YES			
+
+Emp 
+____
+
+empno	int	NO	PRI		
+ename	varchar(10)	YES			
+job	varchar(9)	YES			
+mgr	int	YES			
+hiredate	date	YES			
+sal	int	YES			
+comm	int	YES			
+deptno	int	YES	MUL	
+
+select Dept.Deptno, Dname, Empno, Ename, JOb,Sal,Mgr
+from Dept INNER JOIN Emp
+ON Dept.Deptno = Emp.Deptno;
+
+
+select D.Deptno, Dname, Empno, Ename, JOb,Sal,Mgr
+from Dept D INNER JOIN Emp E
+ON D.Deptno = E.Deptno;
+
+SELECT A.AgentId, FirstName, LastName, City, State,
+P.PolicyId, AppNumber,AnnualPremium,ModalPremium
+FROM Agent A INNER JOIN AgentPolicy AP
+ON A.AgentId = AP.AgentID
+INNER JOIN Policy P ON 
+P.PolicyID = AP.PolicyID;
+
+
+2) Outer Join : Allows you to display all matching and unmatching records from the given tables. There are various types of Outer Joins as 
+
+	-> Left Outer Join : All records from the left-side table and matching records from the right side table, if any column values does not exists, it would be replaced with NULL keyword. 
+
+	-> Right Outer Join : All records from the right-side table and matching records from left-side table
+	if any column values does not exists, it would be replaced with NULL keyword. 
+
+	-> Full Outer Join 
+
+3) Cross Join : It generates cartician product of two table records, as table A contains n records, table B contains m records, then it generates n*m records. 
+
+4) Self Join : If a table joins with itself, known as self join. 
+
+Subqueries : Sometimes it is not possible to extract data by using single Select
+statement, to overcome this we need the help of subqueries. A subquery is a query, that which is having another query inside, the query which is inside known as inner query, the query which is outside known as outer query. 
+
+Every time, the result of the inner query will be send as input to the outer query. 
+
+-- Display max. salary from EMp table
+
+select max(sal) from Emp;
+
+-- Display name of employ who is getting max salary 
+
+There are various types of subqueries known as 
+
+(I)   Single-Row Subquery : If a subquery returns only one row at a time known as single row subquery.
+
+(ii)  Multi-Row Subquery : If a subquery returns more than one row at a time known as multi-row subquery. 
+
+Multi-Row subqueries can be handled by using ALL or ANY Operator. 
+
+ALL -> Acts as AND operator
+
+ANY -> Acts as OR Operator 
+
+Empno <> ALL(10,20,30) means empno <> 10 AND Empno <> 20 and Empno <> 30 
+
+Empno = ANY(10,20,30) means Empno=10 OR Empno=20 OR Empno=30
+
+-- Display Idle Depts from Dept and Emp table 
+
+select * from Dept where Depno <> ALL(select Deptno From Emp);
+
+
+-- Display all dept details who have employs
+
+
+
+(iii) Correlated Subquery 
+
+
+
+
 
 
 

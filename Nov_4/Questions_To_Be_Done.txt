@@ -1,0 +1,32 @@
+1) Display all records from Customer
+
+2) Write a query to check customer username and password correct or not, if correct show result as 1 else show result as 2
+
+3) Display info whose customername contains name 'kumar'
+
+4) Display info whose customerName is Sunil and password is 'infinite'
+
+5) Display all records from Menu
+
+6) Display total records of veg/non-veg items
+
+7) Display max men_price from menu-table
+
+8) Display second max men_price from Menu-table
+
+9) Display least calories food from menu-table
+
+10) Display all records from vendor
+
+11) Write a query for vendor authentication like customer (query 2)
+
+12) Apply Inner join/OuterJoin/ from Customer and Wallet tables
+
+13) Display all records from Wallet table
+
+14) Display matching records from customer and wallet tables (use subqueries)
+
+15) Display unmatched records from Customer and wallet tables (use subqueries)
+
+16) Display customer names for whose wallet contains less than 1000 rs
+
