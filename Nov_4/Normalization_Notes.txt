@@ -1,0 +1,159 @@
+count : Used to display total records for that value is not null
+
+select count(comm) from Emp; assume we got 4 records means for 4 records values are available remaining are NULL.
+
+count(*) : Display total no.of records of the particular table
+
+Group By : Used to display summary reports based on the field specified
+
+Having : This clause allows you to check conditions in aggregate field(s) specified.
+
+What is the difference between WHERE clause and HAVING clause 
+
+WHERE clause allows you to check conditions on table field(s), as HAVING clause allows you to check conditions on aggregate fields. 
+
+-- Display info whose job/dept contains more than 1 employ
+
+First Where Cluase next group by next having next order by
+
+________________________________________________________________________________________________________
+
+Normalization is the scientific method of breaking down the complex table structures into simple table structures by using certain rules. 
+
+There are various types of normal forms we have as 
+
+Employ(Empno, Ename, DeptCode,DeptHead,Gender,ProjCode,Hours) 
+
+1) First Normal Form : A table said to be in 1NF, if each cell contains precisely one value (Atomic Values)
+
+Assume, above table we have some sample data as 
+
+E001, Sundhara Pandi, D001,Sudha G, Male, {P001,P015,P111},{88,64,56} 
+
+By Applying 1NF, 
+E001, Sundhara Pandi, D001,Sudha G, Male, P001,88
+E001, Sundhara Pandi, D001,Sudha G, Male, P015,64
+E001, Sundhara Pandi, D001,Sudha G, Male, P111,56
+ 
+2) Second Normal Form : A table said to be in 2NF, at first it must be in 1NF, and every attribute in table functionally depend on whole key but not part of key. {Functional Dependency} 
+
+Before going to this NF, please check INSERT, Update and Delete Anomolies and then only proceed to 2NF 
+
+Insert : Employ records are not recorded until we receive project details. 
+
+Update : The Employ Details, DeptHead, DeptCode are repeated multiple times. If any Dept Head moves to another Dept, the subsequent change needs to be updated in all corresponding records 
+
+Delete : If any Employ project completed, then the record to be deleted from table, then it deletes all Employ details, Project Details and Dept details to be lost. 
+
+*** 1NF is inadequate *** So please move to 2NF 
+
+Guidelines : 
+
+	-> Find and remove attributes that are not functionally depend on whole key 
+
+	-> Group the remaining attributes. 
+
+
+Employ(Empno, Ename, DeptCode,DeptHead,Gender,ProjCode,Hours) 
+
+Empno -> Ename
+
+Empno -> DeptCode (Y)
+Empno -> DeptHead (Y)
+Empno -> Gender (Y)
+Empno -> ProjCode (N)
+Empno -> Hours (N)
+
+Employ(Empno+,Ename,DeptCode,DeptHead)
+Project(ProjCode+,Hours,Empno-)
+
+3) Third Normal Form : A table said to be in 3NF, at first it must be in 2NF and every attribute in table depends on whole key but not transitively. 
+
+Insert : If company starts new dept, that will not be recorded until employ comes. 
+
+Update : DeptCode, DeptHead details are repeated multiple times, so if any DeptHead moves to another dept. the change needs to be reflected in all corresponding records. 
+
+Delete : If Employ resigns to his job, then employ details along with Dept Details also to be lost.
+
+So, 2NF inadequate in this situation, so we need to go for 3NF 
+
+Guidelines : 
+
+	-> Find and remove attributes that are transitively depend on whole key
+	-> Group the remaining attributes.
+
+By Applying 3NF 
+
+Employ(Empno+,Ename,DeptCode,DeptHead)
+Project(ProjCode+,Hours,Empno-)
+
+Dept(DeptCode,DeptHead)
+Employ(Empno+,Ename,Gender,DeptCode-)
+Project(ProjCode+,Hours,Empno-)
+
+___________________________________________________________________________________________________
+
+College(StudentId,StudentName,Gender,DateOfJoin,DeptCode,DeptName,DeptHead)
+AttendanceId,AttendanceDate,AttendanceStatus)
+
+
+First Normal Form (1NF) : A table said to be in 1NF, each cell contains precisely
+once value (atomic Values) 
+
+Insert : Student records are not Inserted until attendance Details comes 
+
+Update : DeptCode, DeptName, DeptHead details repeated multiple times, if any 
+DeptHead moves to another Dept, the change needs to be reflected in all 
+corresponding records.
+
+Delete : If any Student Record to be deleted, then all Dept and Attendance Details
+are lost
+
+So 1NF inadequate, so 2NF we have to proceed
+
+Second Normal Form (2NF) : A table said to be in 2NF, at first it must be in 1NF, and every attribute functionally depend on whole key but not part of the key.
+
+College(StudentId,StudentName,Gender,DateOfJoin,DeptCode,DeptName,DeptHead)
+AttendanceId,AttendanceDate,AttendanceStatus)
+
+
+StudentID -> StudentName (Y)
+StudentId -> Gender (Y)
+StudentId -> DateOfJoin (Y)
+StudentID -> DeptCode(Y)
+StudentID -> DeptName(Y)
+studentId -> DeptHead(Y)
+StudentId -> AttendanceId (N)
+StudentId -> AttendanceDate (N)
+StudentId -> AttendanceStatus (N)
+
+Student(StudentID+, StudentName,Gender,DateOfJoin,DeptCode,DeptName,DeptHead)
+Attenance(AttendanceId+,AttendanceDate,AttendanceStatus,StudentID-)
+
+Insert : If you want to enter any new dept records, student need to join that is not right 
+
+Update : DeptCode,DeptHead Repeated multiple times, if any deptHead moves to another dept the change needs
+	to be reflected in all corresponding records
+
+Delete : If any Student Record Deleted, then the corresponding Dept records also to be deleted 
+
+so, there is transitive dependency
+
+Third Normal Form : A table said to be in 3NF, at first it must be in 2NF, and every attribute in table A depends on table B, but not transitively
+
+Dept(DeptCode+,DeptName,DeptHead)
+Student(StudentId+,StudentName,Gender,DateOfJoin,DeptCode-)
+Attendance(AttendanceId+,AttendanceDate,AttendanceStatus,StudentId-)
+
+
+
+
+
+
+
+
+
+
+
+
+

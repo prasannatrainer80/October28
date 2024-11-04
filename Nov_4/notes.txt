@@ -1,0 +1,17 @@
+count : Used to display total records for that value is not null
+
+select count(comm) from Emp; assume we got 4 records means for 4 records values are available remaining are NULL.
+
+count(*) : Display total no.of records of the particular table
+
+Group By : Used to display summary reports based on the field specified
+
+Having : This clause allows you to check conditions in aggregate field(s) specified.
+
+What is the difference between WHERE clause and HAVING clause 
+
+WHERE clause allows you to check conditions on table field(s), as HAVING clause allows you to check conditions on aggregate fields. 
+
+-- Display info whose job/dept contains more than 1 employ
+
+First Where Cluase next group by next having next order by
