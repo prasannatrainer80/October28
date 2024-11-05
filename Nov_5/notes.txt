@@ -1,0 +1,81 @@
+Correlated Subquery : A subquery where we can use outer query references inside the inner query known as correlated subquery.
+
+
+Correlated subqueries are used for row by row processing. As each subquery executed once for every row of outer query.
+
+The subquery will be executed repeatedly for each row of the oute query using the values from the current row 
+
+For example if I want to print nth max salary 
+	
+E1	E2	
+800     	800 > 800
+1600		800 > 1600
+1250		1250 > 1600
+2975		2975 > 1600   2975
+1250		
+2850		2850 > 2975
+2450		2450 > 2975
+3000		3000 > 2975  3000
+5000		5000 > 3000  5000
+1500		1500 > 5000
+1100		1100 > 5000
+950		950 > 5000
+3000		1300 > 5000 
+1300
+
+
+so it print 5000 as 1st max sal
+
+800		800 > 800
+1600		800 > 1600
+1250		1250 > 1600
+2975		2975 > 1600     2975 (2)
+1250		2850 > 2975
+2850		2450 > 2975     
+2450		3000 > 2975	3000 (1)
+3000
+5000		5000 > 3000	5000 (0)
+1500	
+1100
+950
+3000
+1300
+
+
+Data Types : 
+_____________
+
+int, float, numeric,
+date, time, datetime
+char, varchar 
+Enum 
+
+Data Integrity : It is imp. to ensure that the data stored in tables is complete and consistent.  The concept of maintaining consistency and completeness of data is called data integrity.  It is enforced to ensure that the data in the database is accurate, consistent and reliable.  
+
+There are various levels of integrity known as
+
+(I) Entity Integrity : Ensures that each row can be uniquely identified by an attribute called the primary key. The primary key column contains unique value in all the rows. This column cannot be NULL. 
+
+(ii) Domain Integrity : Ensures that only a valid range of values is stored in a column. It can be enforced by restricting the type of data.  For suppose the dept field need to contain the list of values as 'computers' or 'physics' or 'maths' then it is coming under the part of domain integrity. 
+
+(iii) Referential Integrity : Ensures that the values of the foreign key match the values of the corresponding primary key. 
+
+
+Basic Sql Commands : 
+________________________
+
+There are various SQL commands we have as 
+
+1) DDL (Data Definition Language)
+
+	CREATE, ALTER, DROP, TRUNCATE 
+
+2) DML (Data Manipulation Language) 
+
+	INSERT, UPDATE and DELETE 
+
+3) DQL (Data Query Language)
+
+ 
+
+
