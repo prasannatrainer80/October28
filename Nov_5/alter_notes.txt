@@ -1,0 +1,68 @@
+Alter Command : 
+
+If you want to add/modify/delete any columns or change the structure of the document, then we need the help of alter command. 
+
+alter table table_name add/modify/delete column properties
+
+Drop Command : Used to delete object permanently from the database
+
+drop user user_name;
+
+drop table table_name;
+
+Truncate command : This command allows you delete all records from the table, but table structure will exist.
+
+
+truncate table table_name;
+
+truncate table employ;
+
+________________________________________________________________________
+
+
+DML (Update, Delete) 
+
+Update : This command allows you to update table old record values with 
+new record values.
+
+Update table_name set field1=new_value, field2=new_value ... {where condition}
+
+__________________________________________________________________________
+
+
+Delete : This command allows you to delete all the table record or matching reocrod 
+
+syntax  
+
+delete from table_name;
+
+all the records will be deleted
+
+delete from table_name where condition
+
+then the records which satisfy condition gets deleted.
+
+What is the difference between DELETE and TRUNCATE 
+
+Difference is If you use DELETE command, you can recall the records which are deleted accidently, but if you use Truncate command we cannot recall the records. 
+
+Transaction : Contains group of statements to be executed as a unit. 
+
+Transaction is having 4 major properties known as 
+
+ACID 
+
+Atomocity
+
+Consistency
+
+Isolation
+
+Durability 
+
+
+
+
+
+
+
