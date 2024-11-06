@@ -1,0 +1,344 @@
+1) Which clause allows you to eliminate duplicate entries at the time of display
+
+DISTINCT
+
+2) What is the difference between count(column_name) and count(*) 
+
+count(column_name) display total reocrds for that column_name value not null
+
+count(*) Displays total no.of rows of table
+
+3) What is the definition of 1NF
+
+Each cell contains precisely one value (atomic) values
+
+4) How many primary keys will be there for a table
+
+A table will have only one primary key, as a primary key can be spanned into more than one column.
+
+5) Write a command to add a column gender ENUM('MALE','FEMALE') to emp table using alter command
+
+6) select from users where username='admin'
+
+7) What is the purpose of auto_increment 
+
+8) Which command used to remove data from MySQL table
+
+DELETE
+
+9) What is the diff between DELETE and TRUNCATE
+
+Delete we can rollback, truncate not
+
+10) Which clause used to filter records of sql query
+
+WHERE
+
+11) Which SQL Statement used to add new data into a database table
+
+INSERT
+
+12) What is the purpose of group by 
+
+Groups data based on one or more columns
+
+13) Which command used to change data in an existing row
+
+Update
+
+14) Which command used to change the structure of table
+
+Alter
+
+15) What is the purpose of Order By Clause 
+
+16) select Empno, ename, job, sal from Emp 
+     where empno > 10 
+     order by ename;
+
+17) select count(distinct sal) from Emp
+
+18) select 10+20  -- 30
+
+19) select dept,sum(sal) from emp group by dept
+
+20) Which datatype used to store true/false information in MySQL
+
+Boolean
+
+21) Which data type suitable to store monetary values
+
+Decimal
+
+22) Alter table Employ add column birthdate date;
+
+23) select * from Emp having gender='MALE'
+
+Error
+
+24) Create Table Test (OrderID INT, OrderDate DateTime Default Current_TIMESTAMP);
+
+This command will create a new table and orderdate column that defaults to the current 
+timestamp when a new record inserted
+
+25) 
+
+Create Table Users
+(
+    ID INT,
+    EMAIL varchar(30)
+);
+
+Write a command to add primary key on id column (using alter) 
+
+alter table users add constraint pk_users_id primary key(id)
+
+26) Create table Payroll
+    (
+       payrolId INT,amount numeric(9,2), ID INT);
+
+Write a command to add foreign key on payroll ID of Users (ID) using alter command 
+
+27) select dept, sum(sal) from Emp group by Dept having sum(sal) > 2000 where dept in('Java','sql','dotnet');
+
+error 
+
+28) update employ set basic=basic+1000, comm=200 where dept in('Java','Dotnet','Sql');
+
+Update basic and comm for java,dotnet,sql depts
+
+29) select count(*) from users;
+
+Total records of users tables
+
+30) Insert into Orders(ProductId,Quantity) values(101,1) on duplicate key update productId=productId+100;
+Adds new record to Orders table, but if productid already exists then it incremnets by 100
+
+31) What is the difference between 
+
+Delete from EMploy
+delete from employ where empno=5;
+
+32) What is the purpose of ON DUPLICATE KEY UPDATE 
+
+Updares the row if it already exists
+
+33) What is the purpose of JOIN keyword in sql
+
+Used to extract data from more than one table
+
+34) Is it possible to join a table with itself 
+
+self join (possible)
+
+35) which join returns only rows that have a match in both joined tables
+
+Inner Join
+
+36) In which SQL Keyword used to create a subquery 
+
+select 
+
+we can do subquery in select, where, from 
+
+37) Which of subquery executed once for each row processed by the parent query
+
+correlated subquery 
+
+select EmpId,max(sal) from Emp group by deptId 
+having count(empID) > 1;
+
+-- Retrieves Highest salary in each dept with more than one employ 
+
+38) What is the purpose of primary key 
+
+39) What is Super Key 
+Any key that which uniquely identifies rows of a table made up of more than 
+one attribute known as composite/super key
+
+Employ(Empno,Ename,Salary,SalaryDate,DeptId,Gender)
+
+Empno+SalaryDate is Super Key
+
+Project(ProjCode,EmpCode,Hours)
+
+ProjCode+EmpCode is super key
+
+Courses(Ccode+,Name,Duration,Fee,Prerequisite)
+Faculty(FacCode+,Name,Qual,Exp)
+FacCode(Ccode-,FacCode-)
+
+Join the 3 tables and with inner join 
+
+Course_Faculty(
+CREATE TABLE COURSES
+(
+    CCODE INT AUTO_INCREMENT,
+    NAME VARCHAR(30) NOT NULL,
+    DURATION INT NOT NULL CHECK(DURATION >= 1),
+    FEE INT NOT NULL CHECK(FEE >= 0),
+    PREREQUISITE VARCHAR(100) NOT NULL,
+    PRIMARY KEY(CCODE)
+);
+
+DESC COURSES;
+
+
+CREATE TABLE FACULTY
+(
+    FACCODE INT AUTO_INCREMENT,
+    NAME VARCHAR(30) NOT NULL,
+    QUAL VARCHAR(30) NOT NULL,
+    EXP VARCHAR(100) NOT NULL,
+    PRIMARY KEY(FACCODE)
+);
+
+DESC FACULTY;
+
+
+
+CREATE TABLE COURSE_FACULTY
+(
+	FACCODE INT NOT NULL,
+	CCODE INT NOT NULL,
+	GRADE CHAR(1) NOT NULL,
+	FOREIGN KEY(FACCODE) REFERENCES FACULTY(FACCODE),
+	FOREIGN KEY(CCODE) REFERENCES COURSES(CCODE),
+	PRIMARY KEY(FACCODE,CCODE),
+    	CONSTRAINT FACULTY_GRADE CHECK (GRADE IN ('A','B','C'))
+);
+
+40) Create table Test (ID INT, sal decimal);
+
+Wrong as decimal value needs to give precision
+
+decimal(7,2) 
+
+41) Identify DML commands below
+
+CREATE 
+ALTER
+UPDATE
+TRUNCATE
+
+42) Which command used to delete all rows in a table without having the action logged
+
+TRUNCATE
+
+43) Which operator tests the column for absence of data 
+
+IS NULL
+
+select * from emp where comm is NULL
+
+44) select instr('hello world','l');
+
+3
+
+45) INNER JOIN also known as EQUI JOin
+
+46) select round(65.726,-1) 
+
+47) Which command makes the changes permanent in the database
+
+Commit
+
+48) Update user set lastName='prasanna' into empno = 1;
+
+49) How to change the structure of the table 
+
+50) What is CASE in SQL
+
+51) 
+
+
+Employ(empno,name,gender)
+Payroll(PayrolId,Salary,TakeHome,Empno)
+
+Which normal form above table 2NF
+
+52) What is the definition of 2NF 
+
+A table said to be in 2NF, at first it must be in 1NF, and 
+every attribute functionally depend on whole key but not part of key
+
+
+53) Identify correct order of sql statement
+
+	-> Select, Group By, Where, Having
+
+	-> Select, Where, Group By, Having  (correct)
+
+	-> select, having, where, gropu by
+
+	-> select, where, having, group by
+
+54) What is difference between primary key and unique key
+
+Unique key can have one null value per table
+
+Primary key only one, but more unique keys we can make
+
+55) A row can be called as TUPLE
+
+56) Column can be called as Attribute
+
+57) NO.of rows are called Cardinality
+
+58) No.of Columns are called Degree
+
+59) If subquery returns more than one value how to handle 
+
+ALL -> Acts as AND Operator
+
+ANY -> Acts as OR Operator
+
+60) What is 3NF 
+
+Transitive Dependency
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+40) 
+
+
+
+
+
+
+
+
+
