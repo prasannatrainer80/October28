@@ -1,0 +1,79 @@
+
+-- MODULE 1
+
+-- 1) Display records from students (Batch-wise total no.of students exists)
+	SELECT BCODE, COUNT(ROLLNO) AS TOTAL
+	FROM STUDENTS
+	GROUP BY BCODE;
+
+
+-- 2) Display total payment paid by all students from payment table student-wise
+	SELECT ROLLNO,SUM(AMOUNT)
+	FROM PAYMENTS
+	GROUP BY ROLLNO;
+
+
+-- 3) Display total no.of records from Payment table
+	SELECT COUNT(*) AS TOTAL_RECORDS
+	FROM PAYMENTS;
+
+
+-- 4) Display total no.fo records from payment table, by eliminating duplicate student No
+	SELECT COUNT(DISTINCT ROLLNO) AS TOTAL_RECORDS
+	FROM PAYMENTS;
+
+
+-- 5) Display the ccode, max(stdate) from batches table.
+	SELECT CCODE, MAX(STDATE)
+	FROM BATCHES;
+
+
+-- 6) Display max. fee from Course table. 
+	SELECT MAX(FEE) AS MAXIMUM
+	FROM COURSES;
+
+
+-- 7) Display max. fee from Course table w.r.t. Ccode 
+	SELECT CCODE, MAX(FEE) AS MAXIMUM
+	FROM COURSES
+	GROUP BY CCODE;
+
+
+-- 8) Display total courses from batches table which are started in last 3 months
+	SELECT COUNT(BCODE)
+	FROM BATCHES
+	WHERE STDATE >= '2020-11-11';
+
+
+-- 9) Display all courses from batches table w.r.t. Ccode (min 2 entries required)
+	SELECT *
+	FROM BATCHES
+	GROUP BY CCODE
+	ORDER BY CCODE;
+
+
+-- 10) Display all records from batches table, which courses are started last 3 months 
+-- and min. 2 records to be entered. 
+	SELECT * FROM BATCHES
+	WHERE STDATE >= '2019-11-11';
+
+
+-- 11) Display information from course_faculty table, as which faculty taking how many courses in ascending order w.r.t. Count
+	SELECT COUNT(BATCHES.FACCODE), COUNT(BCODE) 
+	FROM COURSE_FACULTY
+	INNER JOIN FACULTY ON COURSE_FACULTY.FACCODE=FACULTY.FACCODE
+	INNER JOIN BATCHES  ON FACULTY.FACCODE=BATCHES.FACCODE
+	ORDER BY COUNT(FACCODE);
+
+
+
+-- MODULE 2
+
+-- 1) _HAVING_ clause is used to select groups based on condition. 
+
+
+-- 2) Select count(*) from students;  Is it a valid query.
+      YES
+
+-- 3) What is the order of WHERE, GROUP BY and ORDER BY.
+      WHERE -> GROUP BY -> ORDER BY
