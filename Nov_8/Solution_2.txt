@@ -1,0 +1,60 @@
+-- MODULE 2
+
+-- 1) _HAVING_ clause is used to select groups based on condition. 
+
+
+-- 2) Select count(*) from students;  Is it a valid query.
+      YES
+
+-- 3) What is the order of WHERE, GROUP BY and ORDER BY.
+      WHERE -> GROUP BY -> ORDER BY
+
+
+-- 4) Display ROLLNO of students who have paid for more than twice.
+	SELECT ROLLNO
+	FROM PAYMENTS
+	GROUP BY ROLLNO
+	HAVING COUNT(*) > 2;
+
+
+-- 5) Display average time taken for subject ORA.
+	SELECT AVG(DURATION)
+	FROM COURSES
+	WHERE NAME='ORACLE';
+
+
+-- 6) Display faculty who can take more than 2 courses.
+	SELECT * FROM FACULTY
+	WHERE FACCODE = ANY
+	(SELECT FACCODE FROM BATCHES GROUP BY FACCODE HAVING COUNT(*)>1);
+
+
+-- 7) Display least course fee.
+	SELECT CCODE,NAME,MIN(FEE) AS MINIMUM
+	FROM COURSES;
+
+
+-- 8) Display the number of months between first and last batches of course Java.
+	SELECT FLOOR(DATEDIFF(MAX(ENDDATE),MIN(STDATE))/30)
+	FROM BATCHES
+	WHERE CCODE=5;
+
+
+-- 9) Display Year, course and number of batches of that course.
+	SELECT date_format(STDATE,'%Y'), CCODE, COUNT(*)
+	FROM BATCHES
+	WHERE CCODE=5;
+
+
+-- 11) Display the number of students joined in each month.
+	 SELECT DATE_FORMAT(DJ,'%M'),COUNT(ROLLNO)
+	 FROM STUDENTS
+	 GROUP BY DATE_FORMAT(DJ,'%M');
+
+
+-- 12) Display the number of students joined in each month  of the current year.
+	  SELECT DATE_FORMAT(DJ,'%M'),COUNT(ROLLNO)
+	  FROM STUDENTS
+	  GROUP BY DATE_FORMAT(DJ,'%M %Y');
+
+
