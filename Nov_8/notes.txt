@@ -1,0 +1,151 @@
+private 
+
+public
+
+protected
+
+friendly 
+
+How to define a method 
+
+access_specifier return_type method_name(parameter(s)) {
+....
+....
+....
+}
+
+if a method will not return any value, then it would be prefixed with void keyword
+
+public void show() {
+...
+...
+...
+}
+
+You can create an object to the class, as 
+
+class_name obj  = new class_name();
+
+while loop : This loop executes all the statements repeatedly until the condition remains true, if the condition remains false, then it comes out of the loop. For every loop, basically there are 3 phases known as 
+
+	(I) Initialization
+
+	(ii) Condition
+
+	(iii) Increment/Decrement 
+
+Initialization performed at the beginning of the loop.
+
+Condition performed at the conditional part of the loop.
+
+Increment/Decrement performed before closing the loop. 
+
+while(condition) {
+  statement(s);
+}
+
+
+public class Quiz3 {
+
+	public static void main(String[] args) {
+		int i;
+		System.out.println(i);
+	}
+}
+
+
+for loop : this loop executes all the statement(s) repeatedly until the condition remains true, if the condition remains false, then it comes out of the loop. 
+
+for(initialization;condition;increment/decrement) {
+  statement(s);
+}
+
+do...while : This loop executes all the statement(s) atleast once and then it checks for the condition. If the condition remains false, then it comes out of the loop
+
+do {
+...
+...
+...
+} while(condition);
+
+________________________________________________________________________________________
+
+
+Arrays : An array is the finite ordered set of homogeneous elements, means all the elements belongs to same data type. 
+
+All the elements of array are stored in successive memory locations. 
+
+int[] a = new int[]{12,4,55,21,33};
+a[0]=12;
+a[1]=4;
+a[2]=55;
+a[3]=21;
+a[4]=33;
+
+	int[] a = new int[] {12,44,3,55,23};
+//		for(int i=0;i<a.length;i++) {
+//			System.out.println(a[i]);
+//		}
+		
+		for (int i : a) {
+			System.out.println(i);
+		}
+
+How internally foreach loop is working ???
+
+Here, at first i points to the first element in array A, after processing first element, it checks next element is there or not by using hasMoreElements(), if hasMoreElements() returns true, it moves to the next element by using nextElement(), it repeats as soon as has hasMoreElements() returns true
+
+What is the difference between post-increment and pre-increment : 
+
+
+IN Post-Increment at first it assigns old value and then it increments,
+in pre-increment at first it increments and assigns the update value.
+
+In Post-Increment the updated value will affect in next statement or next operator(expression)
+
+int i=12;
+		int j = i++ + ++i;
+
+A(Actual) 12 + 14
+M(Memory) 13
+
+int i=12;
+		int j = i++ + i++ + ++i;
+
+A(Actual)  12 + 13 + 15
+M(Memory)  13  14   15
+
+int i=12;
+int j = i++ + ++i + ++i + i++;
+
+A(Actual)  12 + 14 + 15 + 15
+M(Memory)  13   14   15   16
+
+
+int i=12;
+int j = i++ + ++i + i++ + i-- + --i;
+A  12 + 14 + 14 + 15 + 13
+M  13   14   15   14
+
+
+public class Quiz11 {
+
+	public static void main(String[] args) {
+		char ch='A';
+		int x = ch;
+		System.out.println(x);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
