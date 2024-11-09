@@ -1,0 +1,66 @@
+What is the top level class in java ???
+
+Object
+
+What is the default package in java
+
+java.lang 
+
+Object class have various methods as
+
+	-> toString() : Having String representation, it displays member variables of the class. 
+
+	-> equals()
+
+	-> hashCode() : Display the memory location address value (hashCode)
+
+	-> getClass() : Displays the object type existing in the current var 
+
+There are 2 types of memories known as 
+
+	(i) STACK
+
+	(ii) QUEUE 
+
+*** Value types will be stored in STACK memory and reference types will be stored in HEAP memory ***
+
+Strings are immutable, as once they are assigned we cannot alter the value by using any string functions.
+
+Once you declare any string value, at first it checks the value will be there in heap memory or not, if the value is there, then it points to the same memory location, if the value is not there, then it points to the different memory location. 
+
+Strings will be stored in heap memory, as there is some separate place known as string constant pool, where we can store all string values. 
+
+________________________________________________________________________________________________
+
+Boxing and Unboxing : 
+
+The concept of converting value types to reference types known as boxing, reference types to value types known as unboxing, Object is the type that which can be used for boxing and unboxing. 
+
+
+int x;
+
+x=12.5
+x=12
+x="Hello"
+
+Object x;
+
+x=12.5;
+x=12;
+x="Hello"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
