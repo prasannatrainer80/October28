@@ -1,0 +1,67 @@
+Abstract Class : A class that which can be created, but not implemented and instantiated known as abstract class. Abstract class contains abstract and non-abstract methods, only abstract method(s) needs to be overrided mandatorily by the derived class. 
+
+abstract class class_name
+{
+    abstract method1();
+    abstract method2();
+}
+
+Interface : Java does not support the concept of multiple inheritance, to achieve this we need the help of interfaces. An interface contains method declaration, and the implementation can be done in the corresponding class, you can add more than one interface to the particular program. 
+
+interface interface_name
+{
+     method1();
+     method2();
+}
+
+You can add an interface to the class by using implements keyword. 
+
+Difference between interface and abstract class 
+_______________________________________________
+
+(I) An abstract class contains both abstract and non-abstract method(s), where interface contains only abstract methods. 
+
+(II) Interface methods are public and abstract by default. 
+
+(iii) Multiple inheritance can be achieved by using interfaces
+
+(iv) An interface can be called from anywhere to anywhere.
+
+___________________________________________________________________________________
+
+Collections : 
+
+Arrays are static data structures means once they are assigned, we cannot alter the value. But, if you want to enter data irrespective of size, then we need the help of collections. 
+
+Collections can grow to any size unlike arrays. 
+
+Collections are from java.util package. 
+
+Collections stores data in terms of Object. 
+
+In Collections, we have top 3 interfaces we have as 
+
+(I) List : Contains List of values. ArrayList and LinkedList classes are falling under List interface.
+
+(ii) Set : Allows you to eliminate duplicate entries from the given collection.
+		HashSet and LinkedHashSet are falling under Set interface. 
+
+Difference between HashSet and LinkedHashSet is 
+
+HashSet displays data in random order, where LinkedHashSet displays data in
+Insertion order. 
+
+(iii) SortedSet : Allows you to display data w.r.t. Sorted Order. TreeSet is falling under SortedSet interface.
+=
+
+
+
+
+
+
+
+
+
+
+
+
