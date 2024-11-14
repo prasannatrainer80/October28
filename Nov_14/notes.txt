@@ -1,0 +1,119 @@
+Generics :
+
+In Collections we cannot provide security to data, as I need to define a collection to store only Strings or Integers or user defined data types. 
+
+To provide type-safety to the data, then we need the help of generics. 
+
+You can define generics using <T> 
+
+In Diamond bracket we need to define generics, as in place of <T> we can pass any data type, like value type or reference type or custom type. 
+
+If you want to pass data types at runtime then we need the help of generics. 
+
+Advantages : 
+_____________
+
+	1) Provides security to the data
+
+	2) No Typecasting required
+
+	3) Write once and apply for all types
+
+	4) Reduces the size of the program. 
+
+
+int -> value type Integer class is wrapper class
+
+double -> Double
+
+Boolean -> Boolean
+
+
+
+What is wrapper class 
+
+The standard values to be stored as objects like int to be stored as object value then we need Wrapper Integer
+
+int x = 12;
+
+Integer x = new Integer(12);
+
+Map interface : Allows you to store data w.r.t. Key/Value pairs. 
+
+In Map, we have various classes as HashTable and HashMap. 
+
+Map<K,V> obj = new HashTable<K,V>();
+
+_______________________________________________________________________________________________________
+
+Exception Handling : 
+
+
+It is a mechanism of handling runtime errors during execution of the program.
+
+There are 2 types of errors known as
+
+(I) Compile Time
+
+(ii) Runtime 
+
+By using Exception handling, we can overcome runtime errors. 
+
+To handle exceptions, we have 3 blocks as 
+
+1) try block  : This block contains statement(s) in which there is possibility of getting runtime errors, the statement(s) which are placed in this block are treated as heavy weighted statement(s) as JVM allocates excess memory to them. 
+
+2) catch block : Once Exception raised in try block, then the control will be forwarded to catch block, this block contains alternate statement(s) for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+3) finally block : This block contains statement(s) that needs to be executed mandatorily irrespective of try and catch blocks, this block is not mandetroy, but all the statement(s) which are placed in this block are executed as mandatory statement(s). 
+
+Exception is the top most class, from which all kinds of Exceptions are derived. 
+
+try {
+...
+...
+...
+} catch (Exception e) {
+...
+...
+...
+} finally {
+...
+...
+...
+}
+
+printStackTrace() : An exception contains Exception class, error message, line number and char pos, all the details we can display in single line by using printStackTrace()
+
+SimpleDateFormat used to format the given date w.r.t. Specific format.
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+
+format() : Used to convert date to string.
+
+parse() : used to convert String to date. 
+
+There are 2 types of exceptions known as 
+
+1) Checked Exceptions : These are the exceptions that which occurs at compile time. During compilation JVM feels some erroneous code is there and stops the execution at compile time, can be handled at method level by using throws keyword. 
+
+2) Unchecked Exceptions : These are the exceptions that which occurs at runtime can be handled by using try...catch blocks. 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
