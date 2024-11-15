@@ -1,0 +1,293 @@
+Generics :
+
+In Collections we cannot provide security to data, as I need to define a collection to store only Strings or Integers or user defined data types. 
+
+To provide type-safety to the data, then we need the help of generics. 
+
+You can define generics using <T> 
+
+In Diamond bracket we need to define generics, as in place of <T> we can pass any data type, like value type or reference type or custom type. 
+
+If you want to pass data types at runtime then we need the help of generics. 
+
+Advantages : 
+_____________
+
+	1) Provides security to the data
+
+	2) No Typecasting required
+
+	3) Write once and apply for all types
+
+	4) Reduces the size of the program. 
+
+
+int -> value type Integer class is wrapper class
+
+double -> Double
+
+Boolean -> Boolean
+
+
+
+What is wrapper class 
+
+The standard values to be stored as objects like int to be stored as object value then we need Wrapper Integer
+
+int x = 12;
+
+Integer x = new Integer(12);
+
+Map interface : Allows you to store data w.r.t. Key/Value pairs. 
+
+In Map, we have various classes as HashTable and HashMap. 
+
+Map<K,V> obj = new HashTable<K,V>();
+
+_______________________________________________________________________________________________________
+
+Exception Handling : 
+
+
+It is a mechanism of handling runtime errors during execution of the program.
+
+There are 2 types of errors known as
+
+(I) Compile Time
+
+(ii) Runtime 
+
+By using Exception handling, we can overcome runtime errors. 
+
+To handle exceptions, we have 3 blocks as 
+
+1) try block  : This block contains statement(s) in which there is possibility of getting runtime errors, the statement(s) which are placed in this block are treated as heavy weighted statement(s) as JVM allocates excess memory to them. 
+
+2) catch block : Once Exception raised in try block, then the control will be forwarded to catch block, this block contains alternate statement(s) for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+3) finally block : This block contains statement(s) that needs to be executed mandatorily irrespective of try and catch blocks, this block is not mandetroy, but all the statement(s) which are placed in this block are executed as mandatory statement(s). 
+
+Exception is the top most class, from which all kinds of Exceptions are derived. 
+
+try {
+...
+...
+...
+} catch (Exception e) {
+...
+...
+...
+} finally {
+...
+...
+...
+}
+
+printStackTrace() : An exception contains Exception class, error message, line number and char pos, all the details we can display in single line by using printStackTrace()
+
+SimpleDateFormat used to format the given date w.r.t. Specific format.
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+
+format() : Used to convert date to string.
+
+parse() : used to convert String to date. 
+
+There are 2 types of exceptions known as 
+
+1) Checked Exceptions : These are the exceptions that which occurs at compile time. During compilation JVM feels some erroneous code is there and stops the execution at compile time, can be handled at method level by using throws keyword. 
+
+2) Unchecked Exceptions : These are the exceptions that which occurs at runtime can be handled by using try...catch blocks. 
+
+What is the difference between throw and throws keyword 
+
+throw keyword allows you to throw the exception object, where throws keyword used to throw the exception. 
+
+throws will be at method level, where throw will be at object level. 
+
+throw clause used to throw exception based on the condition. 
+
+Write a Program to accept a number, and if number < 0 then throw ArithmeticException, if number = 0 then throw InputMismatchException
+
+How to implement user-defined exceptions ???
+_____________________________________________
+
+System exceptions are inadequate to handle in all situations, to overcome this we need the help of custom exceptions.  Any class, that which derived from Exception class can be treated as custom exception. 
+
+class class_name extends Exception {
+...
+...
+...
+}
+
+
+Write a Program to accept your age check he/she eligible for voting or not, if not raise user-defined exception as VotingException 
+
+Write a Program to accept 2 numbers and perform sum, if any number < 0 then throw NegativeException, 
+if any number = 0 then throw NumberZeroException 
+
+___________________________________________________________________________________________________
+
+Application Architectures :
+____________________________
+
+There are 3 types of application architectures known as 
+
+	   (I) Single Tier
+
+	  (ii) Two Tier
+
+	 (iii) Three Tier
+
+Each application architecture contains 3 layers known as 
+
+	(I) User Services (ii) Business Services (iii) Data Services 
+
+User Services -> is container of data. 
+
+Business Services : Used to perform any business operations or validations. 
+
+Data Services : Data Store (Where we can store data) 
+
+In Single Tier Architecture, one single executable file handles all these operations, so single tier architecture applications are called monolythic applications. 
+
+*** One Single Executable file handles all these operations, so single tier architecture applications are called monolythic applications ***
+
+In Two-tier architecture, combination of 2 layers will be there in one application, and another layer will be there in another application. Here we can implement application in 2 ways as 
+
+(I) Client-Side : Combination of 2 layers will be there in one application, and another layer will be there in another application. 
+
+{User Services + Business Services} + {Data Services} --> Client-Based 
+
+(II) Server-Side : 
+
+{User Services} + {Business Services + Data Services}  --> Server Based
+
+Getters and Setters : 
+
+Property : Properties allows you to define internal behaviour of particular entity. If you want to represent any variable as a field then we need the help of properties. 
+
+By using properties we can control the behaviour. 
+
+How to define the properties 
+
+we have getter() and setter() 
+
+getter() -> used to read data 
+
+setter() -> Used to write data 
+
+____________________________________________________________________________________________________
+
+Employ
+_______
+
+empno -> int
+name -> String
+gender - Enum(MALE,FEMALE)
+dept -> String
+desig -> String
+basic -> double 
+
+
+Perform the below operations as 
+_______________________________
+
+
+1) Add Employ
+2) Show Employ
+3) Search Employ
+4) Update Employ
+5) Delete Employ
+
+Validations : name contains min 5 chars, dept contains min 3 chars, basic between 10000 and 80000 
+
+if validations fails, then raise EmployException 
+
+EmployDaoImpl to be Called in EmployBal (Bal for writing business logic) and EmployBal to be called in main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
