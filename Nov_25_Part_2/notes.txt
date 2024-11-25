@@ -1,0 +1,138 @@
+What is Web Application : 
+
+These are the applications, that which are to be called from various places rather than where they are created. 
+
+If you want to make any distributed or robust applications, then we need the help of web applications 
+
+
+You can create web applications in 2 ways as 
+
+(I) Scripting Languages
+
+(ii) Programming Languages 
+
+Scripting Languages are langauges, that which are interpreted, during runtime they takes lot of time to execute. 
+
+Programming languages are languages, that which are compiled first, during runtime they takes very less time to execute. 
+
+*** Any intranet based application w.r.t. No Security, please opt for client-side scripting ***
+
+*** Any internet based application w.r.t. Min security, please opt for both client-side/server-side 
+	scripting ***
+
+*** Any internet based application w.r.t. High Security, please opt for server-side scripting ***
+
+HTML (HyperText Markup Language) : Which used to create any sample web pages. 
+
+
+
+You can start with html as 
+
+
+<html>
+</html>
+
+<head> </head> : used to define the global content for the given page. 
+
+<title> </title> : Used to display heading on title bar. 
+
+<body> </body> : Contains the actual content for the given page. 
+
+
+<pre> </pre>: Used to define the data w.r.t. Predefined format. 
+
+<img> This tag allows you to add images to the given page. 
+
+<img src="image_name" height width /> 
+
+You can define Ordered and Unordered List as
+
+<ol>
+  <li></li>
+</ol>
+
+<ul>
+
+</ul>
+
+Forms : Allows you to accept the input from the keyboard. There are various types of form controls as 
+
+<form name="formName">
+</form>
+
+<input type="text" /> 
+
+<input type="number" /> 
+
+<input type="date" /> 
+
+<input type="time" /> 
+
+<input type="file" />
+
+<input type="email" /> 
+
+<input type="password" /> 
+
+<input type="button" /> 
+
+<input type="submit" /> 
+
+<input type="reset" /> 
+
+Tables : Allows you to display data w.r.t. Rows and Columns format.
+
+You can start with tables, using 
+
+<table>
+</table>
+
+<tr>
+</tr> : Used to add new row to the particular table. 
+
+<th>
+</th> : used to add header to the table cell. 
+
+<td>
+</td> : Used to add new data to the table cell.
+
+You can merge cells by using 
+
+colspan : Used to add merge no.of columns into a single column. 
+
+alert() : used to display heading on dialog box. 
+
+IN javascript, we can define variables, by using var keyword. 
+
+Arrays : In javascript, we can store different data type elements in array as 
+
+var []. 
+
+var names = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

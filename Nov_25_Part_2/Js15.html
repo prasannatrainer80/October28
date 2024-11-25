@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script>
+            function attendance() {
+                var result = "";
+                if (frmAttendance.chkJansu.checked==true) {
+                    result+="Jansu is Present Today...<br/>".fontcolor("green");
+                } else {
+                    result+="Jansu is Absent Today...<br/>".fontcolor("red");
+                }
+                if (frmAttendance.chkKarthik.checked==true) {
+                    result+="Karthik is Present Today...<br/>".fontcolor("green");
+                } else {
+                    result+="Karthik is Absent Today...<br/>".fontcolor("red");
+                }
+                if (frmAttendance.chkPraveen.checked==true) {
+                    result+="Praveen is Present Today...<br/>".fontcolor("green");
+                } else {
+                    result+="Praveen is Absent Today...<br/>".fontcolor("red");
+                }
+                if (frmAttendance.chkTrisha.checked==true) {
+                    result+="Trisha is Present Today...<br/>".fontcolor("green");
+                } else {
+                    result+="Trisha is Absent Today...<br/>".fontcolor("red");
+                }
+                if (frmAttendance.chkArchana.checked==true) {
+                    result+="Archana is Present Today...<br/>".fontcolor("green");
+                } else {
+                    result+="Archana is Absent Today...<br/>".fontcolor("red");
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmAttendance">
+        <center>
+            <input type="checkbox" name="chkJansu" onchange="attendance()" /> Jansu 
+            <br/>
+            <input type="checkbox" name="chkKarthik" onchange="attendance()" /> Karthik 
+            <br/>
+            <input type="checkbox" name="chkPraveen" onchange="attendance()" /> Praveen 
+            <br/>
+            <input type="checkbox" name="chkTrisha" onchange="attendance()" /> Trisha 
+            <br/>
+            <input type="checkbox" name="chkArchana" onchange="attendance()" /> Archana 
+            <br/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

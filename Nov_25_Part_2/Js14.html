@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+              var names = new Array("Sundhara",
+                            "Varshini", "Trisha","Karthik",
+                            "Vignesh",
+                            "Jansu");
+              var questionNo, totalQuestions;
+              questionNo = 0;
+              totalQuestions = names.length;
+
+            function show() {
+                document.getElementById("student").innerHTML = names[questionNo];
+            }
+
+            function next() {
+                questionNo++;
+                if (questionNo==totalQuestions) {
+                    alert("No Names after this...")
+                    questionNo = totalQuestions -1;
+                }
+                show();
+            }
+ 
+            function prev() {
+                questionNo--;
+                if (questionNo < 0) {
+                    questionNo =0;
+                    alert("No Names before this...");
+                }
+                show();
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <p id="student">
+
+    </p>
+    <input type="button" value="Next" onclick="next()" /> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Previous" onclick="prev()" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</body>
+</html>
