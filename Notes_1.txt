@@ -1,0 +1,34 @@
+HTML will not perform
+
+	-> Actions
+
+	-> Business Logic
+
+	-> Event-Based programming 
+
+To implement above, we need the help of javascript. 
+
+You can make javascript, by using
+
+<script>
+</script> 
+
+You can define the code in functions as
+
+function function_name() {
+...
+...
+...
+}
+
+There are various types of events in javascript, as 
+
+onclick()  : If you click on the button, then onclick() event getting raised.
+
+onchange() : If you change status of checkbox etc... then onchange() event will be raised.
+
+onload() : As soon as the document loaded, then onload() event getting fired. 
+
+onblur() : As soon as you leave the cursor, then onblur() event getting fired. 
+
+

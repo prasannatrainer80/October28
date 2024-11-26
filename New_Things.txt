@@ -1,0 +1,25 @@
+Unit Testing : 
+
+In unit testing, each and every portion of the given code needs to be tested thouroughly, and if any defects are there to be escalated and send for resolution.
+
+Unit Testing can be done by developers only. 
+
+In java, we can implement Unit Testing by using JUNIT. 
+
+Junit is a testing framework, that which allows you to test each and every line of the code, and any defects to be send for escalation. 
+
+
+Mostly unit testing can be done by developers 
+
+We have basic annotations here as 
+
+1) @Before
+
+2) @BeforeClass : This annotation method will be executed only once before the junit testing stars, this annotated method used to handle all global initilizations. 
+
+3) @After
+
+4) @AfterClass : This annotated method will be called only once before end of all testcases, this annotated method used to do all clean up process. 
+
+
+

@@ -1,0 +1,30 @@
+Git is a central repository, that which allows you to work or share the code for the particular authenticated users. 
+
+The life cycle of GitHub is 
+
+1) Local Directory : The actual GitHub folder known as local directory.
+
+2) Staging Area : The area where we need to add the committed code or files to be added. 
+
+3) Local Repository : TO be added to local system
+
+4) Remote Repository : To be added to remote and authorized users can access. 
+
+To add any file to the staging area,
+
+git add .
+
+To add any file to local repo 
+
+git commit -m "message"
+
+here the message is mandatory
+
+To add any file to remote repo
+
+git push origin branch_name {here the branch_name is main, so give as }
+
+git push origin main
+
+
+
