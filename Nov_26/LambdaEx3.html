@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script>
+            login = (user, pwd) => {
+                // alert(user);
+                // alert(pwd);
+                if (user=="Hexaware" && pwd=="Hexaware") {
+                    window.open("http://www.google.com");
+                } else {
+                    alert("Invalid Credentials...");
+                }
+            };
+        </script>
+    </head>
+<body>
+    <form name="frmLogin" action="javascript:login(frmLogin.userName.value, 
+                                                        frmLogin.passWord.value)">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">
+                    Login Page
+                </th>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td>
+                    <input type="text" name="userName" />
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input type="password" name="passWord" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Login" /> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="Reset" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
