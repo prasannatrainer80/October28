@@ -1,0 +1,160 @@
+1) Write the correct syntax for button click event in javascript
+
+a) <input type="button" value="Show" click="show()" /> 
+
+b) <input type="button" value="Show" onclick="show()" /> 
+
+c) <input type="button" value="Show" click="show" />
+
+d) <input type="button" value="show" "click"="Show()" />
+
+(b)
+
+2) Which event will be fired once you change the checkbox value
+
+A) OnBlur B) OnClick C) OnChange D) OnLoad
+
+(c)
+
+3) Which property used to change the background color
+
+a) document.color b) document.background.color c) document.background d) document.bgColor 
+
+(D)
+
+4) If you want to declare variables mandatory, what we need to use
+
+a) "use mandate" b) "use strict" c) "use optional" d) "use allow" 
+
+(b)
+
+5) What is the difference between var and let 
+
+let allows you to declare local variables, where var keyword allows for global declarations
+
+6) Which used to display dialog box 
+
+a) Alert b) MsgBox c) MessageBox.Show d) MsgShow
+
+(A)
+
+7) What is the output statement in javascript
+
+document.writeln()
+
+8) Which output statement used to print result on browser console
+
+console.log
+
+9) Which function used to display data type
+
+typeof()
+
+10) Which function used to perform calculations of mathetical formula
+
+eval()
+
+11) Which event will be fired once you leave the curosor of any control
+
+onblur()
+
+12) What is spread operator (...)
+
+Used to concatenate two arrays, and if you want to pass varying parameters from zero to n args then we need (...) operator.
+
+13) Constants are immutable
+
+14) Default Parameters, you can specify default values to the parameters of the given function. 
+
+function show(company="hexa") {
+...
+...
+}
+
+If you don't pass any value then default value gets executed.
+
+15) Rest Operator (...) acts as spread operator
+
+ • A rest parameter allows you to represent an indefinite number of arguments as an array.
+ • The last parameter (args) is prefixed with the three-dots ( ...). It’s called a rest parameter ( ...args).
+ function fn(a,b,...args) {
+ //...
+ }
+ function fun(...input){
+ let sum = 0;
+ for(let i of input){
+ sum+=i;
+ }
+ return sum;
+ }
+ console.log(fun(1,2)); //3
+ console.log(fun(1,2,3)); //6
+ console.log(fun(1,2,3,4,5)); //15
+
+16) JavaScript Spread Operator
+
+JavaScript spread operator
+ • ES6 provides a new operator called spread operator that consists of three dots (...).
+ • The spread operator allows you to spread out elements of an iterable object such as an array, map, or set. 
+const odd = [1,3,5];
+ const combined = [2,4,6, ...odd];
+ console.log(combined);// [ 2, 4, 6, 1, 3, 5 ]
+ • The spread operator (...) unpacks the elements of an iterable object.
+ • The rest parameter (...) packs the elements into an array
+
+17) To import one variable of js file to another js file, then we need export
+
+ An ES6 module is a JavaScript file that executes in strict mode only. It means that any variables or functions declared in the 
+module won’t be added automatically to the global scope.
+ • To export a variable, a function, or a class, you place the export keyword
+ // cal.js
+ export let a = 10, b = 20, result = 0;
+ export function sum() {
+ result = a + b;
+ return result;
+ }
+ export function multiply() {
+ result = a * b;
+ return result;
+ }
+ • To import everything from a module as a single object
+ • import { a } from './cal.js';
+ import {a, b, result, sum, multiply } from './cal.js';
+ sum();
+ console.log(result); // 30
+ multiply();
+ console.log(result); // 20
+
+18) How to call external js file in html
+
+Assume,we have file as calc.js to be called in html file
+
+<script type="text/javascript" src="calc.js"></script>
+
+19) Lambda Expression syntax 
+
+Arrow function
+ • JavaScript Promise are easy to manage when dealing with multiple asynchronous operations where callbacks can create 
+callback hell leading to unmanageable code.
+ • The promise constructor takes only one argument which is a callback function
+ • The callback function takes two arguments, resolve and reject
+ • Perform operations inside the callback function and if everything went well then call resolve.
+ • If desired operations do not go well then call reject.
+ var promise = new Promise(function(resolve, 
+reject){
+ //do something
+ });
+ 
+let p = new Promise((resolve, reject) => {
+ setTimeout(() => {
+ resolve(10);
+ }, 3 * 100);
+ });
+ p.then((result) => {
+ console.log(result);
+ return result * 2;
+ }).then((result) => {
+ console.log(result);
+ return result * 3;
+ })
+
